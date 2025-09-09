@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estacionamento</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Controle de Estacionamento</h1>
+
+    <!-- Formulário de cadastro -->
+    <form id="car-form">
+      <label for="placa">Placa do veículo:</label>
+      <input type="text" id="placa" name="placa" required placeholder="Ex: ABC-1234">
+
+      <label for="modelo">Modelo do veículo:</label>
+      <input type="text" id="modelo" name="modelo" required placeholder="Ex: Fiat Uno">
+
+      <button type="submit">Registrar Entrada</button>
+    </form>
+
+    <hr>
+
+    <!-- Lista de veículos -->
+    <h2>Veículos no estacionamento</h2>
+    <ul id="car-list">
+      <!-- Veículos aparecerão aqui -->
+    </ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
