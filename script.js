@@ -1,7 +1,6 @@
 const api = "https://estacionamentosn.vercel.app/";
 const main = document.querySelector("main");
 
-
 function listarRotas() {
   const options = { method: 'GET', headers: { 'User-Agent': 'insomnia/11.5.0' } };
 
