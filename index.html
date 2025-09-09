@@ -1,59 +1,64 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estacionamento Larissa V</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estacionamento LEL</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Estacionamento Larissa V</h1>
-
-<section id="carrossel">
-    <div class="carrossel-container">
-        <div class="carrossel-imagens">
-            <img src="https://conteudo.imguol.com.br/c/bol/fotos/49/2018/07/19/estacionamento-garagem-compartilhada-garagem-de-shopping-estacionar-carros-parados-veiculo-veiculos-carro-estacionado-vaga-de-garagem-1532002954127_900x506.jpg" alt="Imagem 1">
-           </div>
-      </div>
-</section>
-
-    </header>
-    <main>
-        <section id="veiculos-lista">
-            <h2>Estadias de Hoje</h2>
-            <div id="veiculos-container">
-              
-            </div>
-        </section>
-
-        <section id="cadastro-veiculo" class="hidden">
-            <h2>Cadastro de Veículos</h2>
-            <form id="form-cadastro">
-                <label for="placa">Placa:</label>
-                <input type="text" id="placa" required>
-                
-                <label for="entrada">Entrada:</label>
-                <input type="datetime-local" id="entrada" required>
-                
-                <label for="saida">Saída:</label>
-                <input type="datetime-local" id="saida" required>
-                
-                <label for="valor-hora">Valor Hora:</label>
-                <input type="number" id="valor-hora" required>
-                
-                <button type="submit">Salvar</button>
-                <button type="button" id="cancelar-btn">Cancelar</button>
-            </form>
-        </section>
-    </main>
-    <br>
-
-<div class="menu">
-            <button id="novo-veiculo-btn">Novo Veículo</button>
-            <button id="editar-veiculos-btn">Editar Veículos</button>
-            <button id="relatorio-btn">Relatório de Estadias</button>
+  <header>
+    <div class="header-content">
+      <h1>Estacionamento LEL</h1>
+      <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i> 
         </div>
-    <script src="app.js"></script>
+      </nav>
+    </div>
+  </header>
+  
+  <main>
+    <section id="novo-veiculo">
+      <h2>Cadastrar Veículo</h2>
+      <form id="formVeiculo">
+        <label for="placa">Placa:</label>
+        <input type="text" id="placa" name="placa" required><br>
+
+        <label for="tipo">Tipo:</label>
+        <select id="tipo" name="tipo" required>
+          <option value="CARRO">CARRO</option>
+          <option value="MOTO">MOTO</option>
+          <option value="VAN">VAN</option>
+          <option value="CAMINHAO">CAMINHÃO</option>
+          <option value="ONIBUS">ÔNIBUS</option>
+        </select><br>
+
+        <label for="proprietario">Proprietário:</label>
+        <input type="text" id="proprietario" name="proprietario" required><br>
+
+        <label for="modelo">Modelo:</label>
+        <input type="text" id="modelo" name="modelo" required><br>
+
+        <label for="marca">Marca:</label>
+        <input type="text" id="marca" name="marca" required><br>
+
+        <label for="cor">Cor:</label>
+        <input type="text" id="cor" name="cor"><br>
+
+        <label for="ano">Ano:</label>
+        <input type="number" id="ano" name="ano"><br>
+
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="telefone" name="telefone" required><br>
+
+        <button type="submit">Cadastrar Veículo</button>
+      </form>
+
+      <div id="message"></div>
+    </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
